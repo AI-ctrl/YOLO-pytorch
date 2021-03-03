@@ -38,8 +38,8 @@ class WebCamVideoStream:
     def __init__(self, src=0):
         # initialize the video camera stream and read the first frame 
         # from the stream
-        # self.stream = cv2.VideoCapture(src)
-        self.stream = cv2.VideoCapture("rtsp://admin:admin1admin@192.168.1.108:554/cam/realmonitor?channel=1&subtype=0")
+        self.stream = cv2.VideoCapture(src)
+        #self.stream = cv2.VideoCapture("rtsp://admin:admin1admin@192.168.1.108:554/cam/realmonitor?channel=1&subtype=0")
         (self.grabbed, self.frame) = self.stream.read()
 
         # initialize the variable used to inidicate if the thread 
